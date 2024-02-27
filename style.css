@@ -7,30 +7,32 @@
 body{
     background-color: #F8EEFF; 
     position: relative;
-    min-height: 100vh
+    min-height: 100vh;
 }
 
 header{
     width: 100%;
-    height: 70px;
+    height: 40px;
 }
 
 main{
     position: absolute;
-    width: 100%;
-    height: 90%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
     padding-bottom: 2.5rem;
 }
 
 .contenedorcajatexto{
     position: absolute;
-    left: 200px;
+    display: inline-block;
+    left: 150px;
     top: 100px;
     padding-left: 100px;
-    width: 30%;
-    height: 600px;
+    width:30%;
+    height: 300px;
 }
 
 .cajatexto{
@@ -53,22 +55,23 @@ main{
 
 .alerta{
     position: absolute;
-    top: 750px;
-    left: 370px;
+    top: 450px;
+    left: 200px;
     display: flex;
     color: #495057;
 }
 
 .contenedor-botones{
     position: absolute;
-    top: 800px;
+    display: flex;
+    top: 487px;
     height: 67px;
-    padding-left: 15%;
+    padding-left: 100px;
     padding-top: 15px;
 }
 
 .btn-encriptar{
-    width: 328px;
+    width: 348px;
     height: 67px;
     border-radius: 24px;
     background-color: #b88bd7;
@@ -82,7 +85,7 @@ main{
 }
 
 .btn-desencriptar{
-    width: 328px;
+    width: 348px;
     height: 67px;
     border-radius: 24px;
     background-color: #dcdaec;
@@ -98,8 +101,9 @@ main{
     display: block;
     position: relative;
     width: 400px;
-    height: 940px;
-    right: 50px;
+    height: 580px;
+    top: 20px;
+    right: 20px;
     padding-right: 20px;
     background-color: #ffffff;
     box-sizing: border-box;
@@ -109,8 +113,7 @@ main{
 
 .contenedormunieco{
     position: absolute;
-    left: 30px;
-    top: 10px;
+    left: 80px;
     box-sizing: border-box;
     padding-top: 50px;
 }
@@ -119,7 +122,7 @@ main{
     position: absolute;
     box-sizing: border-box;
     top: 350px;
-    left: 40px;
+    left: 50px;
  }
 
  .contenedor-parrafo h3{
@@ -141,7 +144,8 @@ main{
 
 .contenedor-resultado{
     position: absolute;
-    bottom: 330px;
+    top: 50px;
+    left: 50px;
     width: 320px;
     height: 450px;
     padding: 0;
@@ -157,14 +161,12 @@ main{
 .contenedor-copiar{
     display: flex;
     position: absolute;
-    bottom: 400px;
-    top: 760px;
-    background-color: aqua;
+    top: 450px;
     padding-left: 40px;
 }
 
 .btn-copiar{
-    width: 328px;
+    width: 348px;
     height: 67px;
     border-radius: 24px;
     background-color: #ffffff;
@@ -185,11 +187,63 @@ main{
 
 .footer{
     position: absolute;
-    top: 1020px;
+    top: 650px;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
     text-align: center;
     background-color: black;
     color: white;
+}
+
+@media screen and (max-width:480px) {
+
+    .logo{
+        padding-left: 120px;
+    }
+
+    .contenedorcajatexto{
+        top: 170px;
+        left: 80px;
+        padding-left: 60px;
+        width: auto;
+        height: 200px;
+    }
+
+    .alerta{
+        top: 400px;
+        left: 50px
+    }
+
+    .contenedor-botones{
+        top: 430px;
+        padding-left: 50px;
+        display: block;
+    }
+
+    .btn-desencriptar{
+        margin-top: 10px;
+    }
+
+    .seccion2{
+        top: 350px;
+        right: 12px;
+        height: 300px;
+    }
+    .contenedormunieco{
+        display: none;
+    }
+    .contenedor-parrafo{
+        top: 50px;
+    }
+    .contenedor-copiar{
+        top:150px;
+    }
+    .contenedor-resultado{
+        height: 120px;
+        margin: auto;
+    }
+    .footer{
+        top:970px;
+    }
 }
