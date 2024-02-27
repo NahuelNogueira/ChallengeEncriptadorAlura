@@ -217,7 +217,7 @@ main{
 
     .contenedor-botones{
         top: 430px;
-        padding-left: 50px;
+        padding-left: 30px;
         display: block;
     }
 
@@ -226,8 +226,7 @@ main{
     }
 
     .seccion2{
-        top: 350px;
-        right: 12px;
+        top: 510px;
         height: 300px;
     }
     .contenedormunieco{
