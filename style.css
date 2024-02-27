@@ -47,6 +47,7 @@ main{
     font-family: 'Inter', sans-serif;
     resize: none;
     outline-style: none;
+    text-transform: lowercase;
 }
 
 .cajatexto::placeholder{
@@ -102,7 +103,6 @@ main{
     position: relative;
     width: 400px;
     height: 580px;
-    top: 20px;
     right: 20px;
     padding-right: 20px;
     background-color: #ffffff;
@@ -196,7 +196,7 @@ main{
     color: white;
 }
 
-@media screen and (max-width:480px) {
+/* @media screen and (max-width:480px) {
 
     .logo{
         padding-left: 120px;
@@ -248,4 +248,4 @@ main{
     .footer{
         top:970px;
     }
-}
+} */

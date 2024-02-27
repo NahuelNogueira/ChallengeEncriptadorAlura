@@ -29,67 +29,28 @@ function ocultarAdelante(){
     contenedor.classList.add("ocultar");
 }
 
-function encriptarTexto(mensaje){
-    var texto = mensaje;
-    var textoFinal = "";
+function encriptarTexto(mensajeEncriptado){
+    let matrizTexto = [["e", "enter"],["i", "imes"],["a", "ai"],["o", "ober"],["u", "ufat"],]
+    mensajeEncriptado = mensajeEncriptado.toLowerCase()
 
-    for(var i = 0; i < texto.length; i++){
-        if(texto[i] == "a"){
-            textoFinal = textoFinal + "ai"
-        }
-        else if(texto[i] == "e"){
-            textoFinal = textoFinal + "enter"
-        }
-        else if(texto[i] == "i"){
-            textoFinal = textoFinal + "imes"
-        }
-        else if(texto[i] == "o"){
-            textoFinal = textoFinal + "ober"
-        }
-        else if(texto[i] == "u"){
-            textoFinal = textoFinal + "ufat"
-        }
-        else{
-            textoFinal = textoFinal + texto[i]
+    for(let i = 0; i < matrizTexto.length; i++){
+        if(mensajeEncriptado.includes(matrizTexto[i][0])){
+            mensajeEncriptado = mensajeEncriptado.replaceAll(matrizTexto[i][0], matrizTexto[i][1])
         }
     }
-    return textoFinal;
-
+    return mensajeEncriptado;
 }
 
-function desencriptarTexto(mensaje){
-    var texto = mensaje;
-    var textoFinal = "";
+function desencriptarTexto(mensajeDesencriptado){
+    let matrizTexto = [["e", "enter"],["i", "imes"],["a", "ai"],["o", "ober"],["u", "ufat"],]
+    mensajeDesencriptado = mensajeDesencriptado.toLowerCase()
 
-    for(var i = 0; i < texto.length; i++){
-        if(texto[i] == "a"){
-            textoFinal = textoFinal + "a"
-            i = i+1;
+    for(let i = 0; i < matrizTexto.length; i++){
+        if(mensajeDesencriptado.includes(matrizTexto[i][1])){
+            mensajeDesencriptado = mensajeDesencriptado.replaceAll(matrizTexto[i][1], matrizTexto[i][0])
         }
-        else if(texto[i] == "e"){
-            textoFinal = textoFinal + "e"
-            i = i+4;
-        }
-        else if(texto[i] == "i"){
-            textoFinal = textoFinal + "i"
-            i = i+3;
-        }
-        else if(texto[i] == "o"){
-            textoFinal = textoFinal + "o"
-            i = i+3;
-        }
-        
-        else if(texto[i] == "u"){
-            textoFinal = textoFinal + "u"
-            i = i+3;
-        }
-        else{
-            textoFinal = textoFinal + texto[i];
-        }
-        
     }
-
-    return textoFinal;
+    return mensajeDesencriptado;
 
 }
 
